@@ -1,0 +1,11 @@
+function z = Hermite() 
+
+x = -5:5; 
+y = 1./(1+x.^2);
+xi = -5:0.01:5;
+yi = interp1(x,y,xi,'pchip');
+
+plot(xi,yi);
+hold on;
+y = 1./(1+xi.^2);
+plot(xi,y,'g');
